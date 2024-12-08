@@ -1,0 +1,62 @@
+Proje Tanımı
+
+Bu proje, bir kütüphane sistemini modelleyerek kitap ekleme, ödünç verme ve geri alma gibi işlemleri gerçekleştirmek için geliştirilmiştir. Sistem, mevcut kitapların listelenmesini ve ödünç alınan kitapların ayrı bir listede tutulmasını sağlar.
+
+Kullanılan Sınıflar
+
+1. Book Sınıfı
+
+Amaç:
+Kütüphanedeki bir kitabı temsil eder.
+
+Özellikler:
+
+title (str): Kitabın başlığı.
+
+author (str): Kitabın yazarı.
+
+is_borrowed (bool): Kitabın ödünç alınıp alınmadığını belirtir.
+
+Metotlar:
+
+__init__(self, title, author): Kitap başlığı ve yazar adı ile kitabı başlatır.
+
+__str__(self): Kitabın bilgilerini ve durumunu ("Alınabilir" veya "Ödünç Alındı") okunabilir formatta döndürür.
+
+2. Library Sınıfı
+
+Amaç:
+Kütüphanedeki kitapları yönetmek, ödünç alma ve geri alma işlemlerini gerçekleştirmek için kullanılır.
+
+Özellikler:
+
+books (list): Kütüphanedeki mevcut kitapların listesi.
+
+borrowed_books (list): Ödünç alınan kitapların listesi.
+
+Metotlar:
+
+add_book(self, book): Yeni bir kitap ekler.
+
+list_books(self): Kütüphanedeki tüm kitapları listeler.
+
+borrow_book(self, title): Kitap başlığına göre bir kitabı ödünç alır.
+
+return_book(self, title): Kitap başlığına göre ödünç alınan bir kitabı geri alır.
+
+list_borrowed_books(self): Ödünç alınan kitapları listeler.
+
+Kullanım:
+
+Temel İşlemler:
+
+Kitap Ekleme: Kullanıcı add_book metodunu kullanarak kütüphaneye yeni bir kitap ekleyebilir.
+
+Kitap Listeleme: list_books metodu, mevcut tüm kitapları listeler.
+
+Kitap Ödünç Alma: Kullanıcı bir kitabı başlığı ile ödünç alabilir ve sistem kitabı "Ödünç Alındı" durumuna geçirir.
+
+Kitap Geri Alma: Kullanıcı ödünç aldığı bir kitabı iade edebilir ve kitap yeniden "Alınabilir" durumuna döner.
+
+Ödünç Alınan Kitapları Listeleme: list_borrowed_books metodu, şu anda ödünç alınmış olan tüm kitapları gösterir.
+

@@ -1,0 +1,59 @@
+Hava Durumu Tahmin Sistemi
+
+Proje Tanımı
+
+Bu proje, bir şehrin hava durumunu tahmin etmek ve sıcaklık bilgisine dayalı önerilerde bulunmak için geliştirilmiştir. Kullanıcı şehir ve sıcaklık bilgisini sisteme ekleyebilir, belirli bir şehir için hava durumunu sorgulayabilir ve sıcaklık değerine göre giyim önerisi alabilir.
+
+Kullanılan Sınıflar
+
+1. City Sınıfı
+
+Amaç:
+Bir şehir ve sıcaklık bilgisini temsil ediyor.
+
+Özellikler:
+
+name (str): Şehrin adı.
+
+temperature (float): Şehrin sıcaklığı.
+
+Metotlar:
+
+__init__(self, name, temperature): Şehir ve sıcaklık bilgisini başlatır.
+
+__str__(self): Şehir ve sıcaklık bilgilerini okunabilir bir formatta döndürür.
+
+2. WeatherForecast Sınıfı
+
+Amaç:
+Şehrin hava durumu sorgulamak ve sıcaklık önerileri sunmak için kullanılır.
+
+Özellikler:
+
+cities (dict): Şehir adını anahtar olarak kullanan ve City nesnelerini değer olarak tutan bir sözlük.
+
+Metotlar:
+
+add_city(self, name, temperature): Bir şehir ve sıcaklık ekler ya da günceller.
+
+get_weather(self, name): Belirtilen şehir için hava durumu bilgisini getirir.
+
+get_advice(self, name): Şehrin sıcaklığına dayalı önerilerde bulunur.
+
+Kullanım:
+
+Örnek Menü İşleyişi:
+
+Kullanıcı şehir adını ve sıcaklığını girerek sisteme yeni bir şehir ekler veya mevcut bir şehrin sıcaklık bilgisini günceller.
+
+Kullanıcı, belirli bir şehir için hava durumu sorgulayabilir ve uygun bir giyim önerisi alabilir.
+
+Sistem, kullanıcıya çıkış yapma seçeneği de sunar.
+
+Giyim Önerileri:
+
+0°C altı: "Soğuk, sıkı giyinin."
+
+0°C-15°C arası: "Serin, mont almayı unutmayın."
+
+15°C üzeri: "Hava güzel, rahat giyin."
